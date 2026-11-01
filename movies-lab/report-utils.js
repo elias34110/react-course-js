@@ -2,11 +2,12 @@ export const getDirectorLine = movie => `Director:${movie.director.name}`;
 
 export const getShortMovies = movies =>
   movies.filter(movie => {
-    movie.duration < 100;
+    return movie.duration < 100;
   });
+  ;
 
 export const findByTitle = (movies, title) =>
-  movies.filter(movie => movie.title === title);
+  movies.find(movie => movie.title === title);
 
 export const getOscarsLine = movie => `Oscars:${movie.awards.oscars}`;
 
